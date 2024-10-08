@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table>
+	<tr>
+		<td>제목</td>
+		<td th:text="${bdto.title}"></td>
+	</tr>
+	<tr>
+		<td>작성자</td>
+		<td th:text="${bdto.name}"></td>
+	</tr>
+	<tr>
+		<td>내용</td>
+		<td th:text="${bdto.content}"></td>
+	</tr>
+	<tr>
+	<td colspan="3">
+		<a href="/list">목록</a>
+		<a th:href="@{update?(id=${bdto.id})}">수정</a>
+		<a th:href="${'delete?id='+bdto.id}">삭제</a>
+		</td>
+	</tr>
+	
+	
+	
+	
+</table>
+</body>
+</html>

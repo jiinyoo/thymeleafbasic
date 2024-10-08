@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table>
+<form method="post" action="updateOk">
+<input type="hidden"  th:value="${bdto.id}" name="id">
+<tr>
+	<td>제목</td>
+	<td><input type="text"  th:value="${bdto.title}"  name="title"></td>
+</tr>
+<tr>
+	<td>작성자</td>
+	<td><input type="text"  th:value="${bdto.name}" name="name"></td>
+</tr>
+<tr>
+	<td>내용</td>
+	<td><input type="text"  th:value="${bdto.content}" name="content"></td>
+</tr>
+	</table>
+<tr>
+	<input type="submit" value=" 수정하기">
+</tr>	
+</form>
+</body>
+</html>

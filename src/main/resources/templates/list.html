@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table align="center">
+<tr>
+	<td>작성자</td>
+	<td>제목</td>
+	<td>조회수</td>
+	<td>작성일</td>
+</tr>
+
+<th:block th:each="bdto:${blist}">
+	<tr>
+		<td th:text="${bdto.name}"></td>
+		<td><a th:href="${'readnum?id='+bdto.id}"  th:text="${bdto.title}"></a></td>
+		<td th:text="${bdto.readnum}"></td>
+		<td th:text="${bdto.writeday}"></td>
+	</tr>
+</th:block>
+
+
+</table>
+
+</body>
+</html>
